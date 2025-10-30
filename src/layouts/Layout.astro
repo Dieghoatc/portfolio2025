@@ -1,4 +1,6 @@
 ---
+import Header from "@/sections/v2/Header.astro";
+
 import "../styles/global.css";
 ---
 
@@ -18,11 +20,19 @@ import "../styles/global.css";
   <body>
     <div class="min-h-screen w-full">
       <slot />
+      <div
+        class="fixed bottom-2 md:top-0
+       w-full flex justify-center items-center z-50"
+      >
+        <Header />
+      </div>
     </div>
   </body>
 </html>
 
-<style>
+<style is:global>
+  @tailwind;
+
   body {
     position: relative;
     min-height: 60vh;

@@ -1,8 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Header from "@/sections/v2/Header.astro";
+
 import Hero from "@/sections/v2/Hero.astro";
 import Projects from "@/sections/v2/Projects.astro";
+import Resume from "@/sections/v2/Resume.astro";
+import Experience from "@/sections/v2/Experience.astro";
 import Footer from "@/sections/v2/Footer.astro";
 ---
 
@@ -11,12 +13,9 @@ import Footer from "@/sections/v2/Footer.astro";
     <div class="flex-1">
       <Hero />
       <Projects />
-    </div>
-
-    <div
-      class="fixed bottom-2 md:top-2 w-full flex justify-center items-center z-50"
-    >
-      <Header />
-    </div>
+      <Experience />
+      <Resume />
+      <Footer />
+    </div>    
   </div>
 </Layout>
