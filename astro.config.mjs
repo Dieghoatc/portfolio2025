@@ -14,10 +14,7 @@ export default defineConfig({
     }
 
   },
-  redirects: {
-    '/': '/v2'
-  },
-  devToolbar: {
+    devToolbar: {
     enabled: false
   }
 });
