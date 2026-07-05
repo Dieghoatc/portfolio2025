@@ -1,9 +1,20 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Header from "@/sections/v2/Header.astro";
+import Footer from "@/sections/v2/Footer.astro";
+import Projects from "@/sections/v2/Projects.astro";
 ---
 
 <Layout title="Projects">
-  <main>
-    <h1>Projects</h1>
-  </main>
+  <section class="pt-16 min-h-screen w-full md:w-[1080px] mx-auto">
+    <main>
+      <h1 class="text-2xl font-bold m-3">Projects</h1>
+      <Projects />
+    </main>
+    <div class="fixed bottom-2 md:top-2
+       left-1/2 -translate-x-1/2 z-50">
+      <Header />
+    </div>
+    <Footer />
+  </section>
 </Layout>

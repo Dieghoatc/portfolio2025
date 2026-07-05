@@ -1,11 +1,61 @@
 ---
-import Abc from "@/components/v2/Abc.astro";
+import ProjectCard from "@/components/v2/ProjectCard.astro";
+
+import abc_project from "@/assets/projects/abc/layer.png";
+import nextjs from "@/assets/nextjs.svg";
+import nestjs from "@/assets/nestjs.svg";
+import tailwindcss from "@/assets/tailwindcss.svg";
+import typescript from "@/assets/typescript.svg";
+import postgresql from "@/assets/postgresql.svg";
+import redis from "@/assets/redis.svg";
+import typeorm from "@/assets/typeorm.svg";
 ---
 
 <section class="mb-8">
   <div class="flex flex-wrap gap-4 mx-8">
     <article>
-      <Abc />
+      <ProjectCard
+        title="Autobuses de Colombia: Full Stack project, News and Routes, +1000 images and more content."
+        description="Everything about Ground Transport in Colombia."
+        image={abc_project}
+        imageAlt="autobuses de colombia desktop preview"
+        link="https://autobusesdecolombia.com"
+        tags={[
+          { icon: nextjs, label: "Next.js" },
+          { icon: nestjs, label: "Nest.js" },
+          { icon: tailwindcss, label: "Tailwind CSS" },
+          { icon: typescript, label: "TypeScript" },
+          { icon: typeorm, label: "TypeORM" },
+          { icon: postgresql, label: "PostgreSQL" },
+          { icon: redis, label: "Redis" },
+        ]}
+      />
+    </article>
+    <article>
+      <ProjectCard
+        title="Autobuses de Colombia API: REST API and interactive documentation."
+        description="Public API powering routes, news and content, with full Swagger documentation."
+        link="https://api.autobusesdecolombia.com/docs"
+        linkLabel="Docs"
+        tags={[
+          { icon: nestjs, label: "Nest.js" },
+          { icon: typescript, label: "TypeScript" },
+          { icon: typeorm, label: "TypeORM" },
+          { icon: postgresql, label: "PostgreSQL" },
+        ]}
+      />
+    </article>
+    <article>
+      <ProjectCard
+        title="Tekbees: Official company website."
+        description="Corporate website built for Tekbees."
+        link="https://tekbees.com"
+        tags={[
+          { icon: nextjs, label: "Next.js" },
+          { icon: tailwindcss, label: "Tailwind CSS" },
+          { icon: typescript, label: "TypeScript" },
+        ]}
+      />
     </article>
   </div>
 </section>
